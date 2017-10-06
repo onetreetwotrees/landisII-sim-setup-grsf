@@ -1,0 +1,23 @@
+LandisData  "Age-only Disturbances - Biomass Parameters"
+
+
+CohortBiomassReductions
+
+>> Disturbance   Woody   Non-Woody
+>> -----------   -----   ---------
+    fire          33%       100%
+    wind           0%         0%
+    harvest       85%         0%
+    insects	  0%        0% << Changed 2017-10-03, was 100%, 0% because I was dealing with dead biomass outside the model for dissertation.
+    (default)     0%         0%
+
+
+DeadBiomassReductions
+
+>> Disturbance   Woody   Non-Woody
+>> -----------   -----   ---------
+    fire           8%       100%
+    wind           0%         0%
+    harvest        0%         0%
+    insects        0%         0%
+    (default)      0%         0%

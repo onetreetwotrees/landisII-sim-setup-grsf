@@ -1,0 +1,794 @@
+LandisData "Base Harvest"
+
+Timestep 1
+
+ManagementAreas "./grsfmgmt3.gis"
+
+Stands "./grsfstands.gis"
+
+>>------------------------------------------------------------------------
+>>##################
+>>Remove Senescing Virginia Pine, leave the remaining young stuff (under 30 yrs).
+Prescription 	PineSalvage
+StandRanking	Economic
+
+>>Species	EconomicRank	MinimumAge
+>>-------	-----------	----------
+PINUVIRG	100		70
+MinimumAge	60
+
+   ForestTypeTable  <<Virginia Pine stand, dominated by more than 40% Virginia Pine.
+>> Inclusion Rule	ageRange	percentCells	species
+    Required		70-120		highest		PINUVIRG
+>>  Forbidden		60-400		70		QUERALBA
+>>  Forbidden		60-250		70		QUERCOCC
+>>  Forbidden		60-300		70		QUERPRIN
+>>  Forbidden		60-250		70		QUERRUBR
+>>  Forbidden		60-250		70		QUERVELU 
+
+
+SiteSelection	Complete
+CohortsRemoved	SpeciesList
+    ACERRUBR 	20-150
+    ACERSACC 	40-300
+    CARYGLAB 	30-300
+    FRAXAMER 	30-300
+    JUGLNIGR 	20-250
+    LIRITULI 	30-300
+    MAGNACUM 	20-150
+    NYSSSYLV 	20-200
+    PINUECHI 	AllExceptYoungest
+    PINUPUNG 	All
+    PINURIGI 	All
+    PINUSTRO 	30-400
+    PINUVIRG 	All
+    POPUGRAN 	30-100
+    POPUTREM 	30-100
+    PRUNSERO 	30-250
+    QUERALBA 	40-400
+    QUERCOCC 	40-250
+    QUERPRIN 	40-300
+    QUERRUBR 	40-250
+    QUERVELU 	40-250
+    ROBIPSEU 	20-150
+    SASSALBI 	20-150
+    TILIAMER 	20-250
+    TSUGCANA 	20-500
+    ULMUAMER 	20-300
+
+>>------------------------------------------------------------------------
+>>##################
+Prescription 	LocustSalvage
+StandRanking	Economic
+
+>>Species	EconomicRank	MinimumAge
+>>-------	-----------	----------
+ROBIPSEU 	100		90
+MinimumAge	60
+
+   ForestTypeTable  <<Black Locust stand, dominated by more than 40% Black Locust.
+>> Inclusion Rule	ageRange	percentCells	species
+    Required		70-150		highest		ROBIPSEU
+>>  Forbidden		60-400		70		QUERALBA
+>>  Forbidden		60-250		70		QUERCOCC
+>>  Forbidden		60-300		70		QUERPRIN
+>>  Forbidden		60-250		70		QUERRUBR
+>>  Forbidden		60-250		70		QUERVELU
+
+SiteSelection	Complete
+CohortsRemoved	SpeciesList
+    ACERRUBR 	30-150
+    ACERSACC 	30-300
+    CARYGLAB 	30-300
+    FRAXAMER 	30-300
+    JUGLNIGR 	30-250
+    LIRITULI 	30-300
+    MAGNACUM 	30-150
+    NYSSSYLV 	30-200
+    PINUECHI 	30-200
+    PINUPUNG 	30-250
+    PINURIGI 	30-200
+    PINUSTRO 	30-400
+    PINUVIRG 	30-120
+    POPUGRAN 	30-100
+    POPUTREM 	30-100
+    PRUNSERO 	30-250
+    QUERALBA 	30-400
+    QUERCOCC 	30-250
+    QUERPRIN 	30-300
+    QUERRUBR 	30-250
+    QUERVELU 	30-250
+    ROBIPSEU 	All
+    SASSALBI 	30-150
+    TILIAMER 	30-250
+    TSUGCANA 	30-500
+    ULMUAMER 	30-300
+
+>>------------------------------------------------------------------------
+>>##################
+Prescription 	WhitePineReleaseMixedOak
+StandRanking	Economic
+
+>>Species	EconomicRank	MinimumAge
+>>-------	-----------	----------
+PINUSTRO	100		20
+QUERALBA	100		70
+QUERCOCC	100		70
+QUERPRIN	100		70
+QUERRUBR	100		70
+QUERVELU	100		70
+MinimumAge	70
+
+SiteSelection	Complete
+CohortsRemoved	SpeciesList
+ACERRUBR 	All
+ACERSACC 	All
+CARYGLAB 	AllExceptOldest
+FRAXAMER 	All
+JUGLNIGR 	All
+LIRITULI 	All
+MAGNACUM 	All
+NYSSSYLV 	All
+PINUECHI 	All
+PINUPUNG 	All
+PINURIGI 	All
+PINUSTRO 	80-400
+PINUVIRG 	All
+POPUGRAN 	All
+POPUTREM 	All
+PRUNSERO 	All
+QUERALBA 	All
+QUERCOCC 	All
+QUERPRIN 	All
+QUERRUBR 	All
+QUERVELU 	All
+ROBIPSEU 	All
+SASSALBI 	All
+TILIAMER 	All
+TSUGCANA 	30-500
+ULMUAMER 	All
+
+>>------------------------------------------------------------------------
+>>##################
+Prescription 	OakShelterWood
+StandRanking	Economic
+
+>>Species	EconomicRank	MinimumAge
+QUERALBA	100		60
+QUERCOCC	100		60
+QUERPRIN	100		60
+QUERRUBR	100		60
+QUERVELU	100		60
+MinimumAge 60
+
+SiteSelection	Complete
+
+CohortsRemoved	SpeciesList
+ACERRUBR 	5-100
+ACERSACC 	5-200
+FRAXAMER 	5-250
+JUGLNIGR 	5-200
+LIRITULI 	5-250
+MAGNACUM 	5-100
+NYSSSYLV 	5-150
+PINUECHI 	All
+PINUPUNG 	All
+PINURIGI 	All
+PINUSTRO 	30-350
+PINUVIRG 	All
+POPUGRAN 	All
+POPUTREM 	All
+PRUNSERO 	All
+QUERALBA 	55-350
+QUERCOCC 	55-200
+QUERPRIN 	55-250
+QUERRUBR 	45-200
+QUERVELU 	55-200
+ROBIPSEU 	All
+SASSALBI 	5-100
+TILIAMER 	5-200
+TSUGCANA 	5-400
+ULMUAMER 	5-250
+
+SingleRepeat  	15
+CohortsRemoved	SpeciesList
+ACERRUBR 	All
+ACERSACC 	All
+CARYGLAB 	AllExceptYoungest
+FRAXAMER 	AllExceptYoungest
+JUGLNIGR 	All
+LIRITULI 	All
+MAGNACUM 	All
+NYSSSYLV 	All
+PINUECHI 	All
+PINUPUNG 	All
+PINURIGI 	All
+PINUSTRO 	AllExceptYoungest
+PINUVIRG 	All
+POPUGRAN 	All
+POPUTREM 	All
+PRUNSERO 	All
+QUERALBA 	AllExceptYoungest
+QUERCOCC 	AllExceptYoungest
+QUERPRIN 	AllExceptYoungest
+QUERRUBR 	AllExceptYoungest
+QUERVELU 	AllExceptYoungest
+ROBIPSEU 	All
+SASSALBI 	All
+TILIAMER 	All
+TSUGCANA 	AllExceptYoungest
+ULMUAMER 	All
+
+
+>>------------------------------------------------------------------------
+>>##################
+
+Prescription 	CommercialThinningOaks
+StandRanking	Economic
+
+>>Species	EconomicRank	MinimumAge
+>>-------	-----------	----------
+QUERALBA	100		40
+QUERCOCC	100		40
+QUERPRIN	100		40
+QUERRUBR	100		40
+QUERVELU	100		40
+LIRITULI	100		40
+PRUNSERO	100		40
+MinimumAge 40
+
+SiteSelection	Complete
+
+CohortsRemoved	SpeciesList
+ACERRUBR 	5-60
+ACERSACC 	5-30
+FRAXAMER 	5-30
+JUGLNIGR 	5-30
+LIRITULI 	5-20
+MAGNACUM 	5-30
+NYSSSYLV 	5-60
+PINUECHI 	5-30
+PINUPUNG 	5-30
+PINURIGI 	5-30
+PINUSTRO 	5-30
+PINUVIRG 	5-30
+POPUGRAN 	5-30
+POPUTREM 	5-30
+PRUNSERO 	5-30
+QUERALBA 	5-25
+QUERCOCC 	5-25
+QUERPRIN 	5-25
+QUERRUBR 	5-25
+QUERVELU 	5-25
+ROBIPSEU 	All
+SASSALBI 	5-30
+TILIAMER 	5-30
+TSUGCANA 	5-30
+ULMUAMER 	5-30
+
+SingleRepeat  	40
+CohortsRemoved	SpeciesList
+ACERRUBR 	All
+ACERSACC 	All
+CARYGLAB 	All
+FRAXAMER 	All
+JUGLNIGR 	All
+LIRITULI 	All
+MAGNACUM 	All
+NYSSSYLV 	All
+PINUECHI 	All
+PINUPUNG 	All
+PINURIGI 	All
+PINUSTRO 	All
+PINUVIRG 	All
+POPUGRAN 	All
+POPUTREM 	All
+PRUNSERO 	All
+QUERALBA 	All
+QUERCOCC 	All
+QUERPRIN 	All
+QUERRUBR 	All
+QUERVELU 	All
+ROBIPSEU 	All
+SASSALBI 	All
+TILIAMER 	All
+TSUGCANA 	All
+ULMUAMER 	All
+>>------------------------------------------------------------------------
+>>##################
+
+
+Prescription RandomClearCut
+StandRanking Random
+
+MinimumAge 90
+MaximumAge 200
+
+SiteSelection PatchCutting 90% 10
+
+CohortsRemoved ClearCut
+>>------------------------------------------------------------------
+>>##################
+
+Prescription RandomVariableRetentionClearCut
+StandRanking Random
+
+MinimumAge 90
+MaximumAge 200
+
+SiteSelection PatchCutting 90% 5
+
+CohortsRemoved	SpeciesList
+ACERRUBR 	All
+ACERSACC 	All
+>>CARYGLAB
+FRAXAMER 	All
+JUGLNIGR 	All
+LIRITULI 	All
+MAGNACUM 	All
+NYSSSYLV 	All
+PINUECHI 	All
+PINUPUNG 	All
+PINURIGI 	All
+>>PINUSTRO 	
+PINUVIRG 	All
+POPUGRAN 	All
+POPUTREM 	All
+PRUNSERO 	All
+QUERALBA 	All
+QUERCOCC 	All
+QUERPRIN 	All
+QUERRUBR 	All
+QUERVELU 	All
+ROBIPSEU 	All
+SASSALBI 	All
+TILIAMER 	All
+TSUGCANA 	All
+ULMUAMER 	All
+>>------------------------------------------------------------------
+>>##################
+Prescription 	SeedTreeVariableRetention
+StandRanking	Random
+
+MinimumAge	90
+
+SiteSelection	PatchCutting 90% 5
+
+CohortsRemoved	SpeciesList
+ACERRUBR 	All
+ACERSACC 	All
+CARYGLAB	5-100
+FRAXAMER 	5-100
+JUGLNIGR 	All
+LIRITULI 	5-100
+MAGNACUM 	All
+NYSSSYLV 	All
+PINUECHI 	5-125
+PINUPUNG 	5-175
+PINURIGI 	All
+PINUSTRO 	5-100
+PINUVIRG 	All
+POPUGRAN 	All
+POPUTREM 	All
+PRUNSERO 	5-150
+QUERALBA 	5-150
+QUERCOCC 	5-150
+QUERPRIN 	5-150
+QUERRUBR 	5-150
+QUERVELU 	5-150
+ROBIPSEU 	All
+SASSALBI 	All
+TILIAMER 	All
+TSUGCANA 	AllExceptYoungest
+ULMUAMER 	All
+
+SingleRepeat  	40
+CohortsRemoved	SpeciesList
+ACERRUBR 	125-150
+ACERSACC 	140-300
+CARYGLAB 	140-300
+FRAXAMER 	140-300
+JUGLNIGR 	140-250
+LIRITULI 	140-300
+MAGNACUM 	140-150
+NYSSSYLV 	140-200
+PINUECHI 	140-200
+PINUPUNG 	140-250
+PINURIGI 	140-200
+PINUSTRO 	140-400
+PINUVIRG 	120
+POPUGRAN 	100
+POPUTREM 	100
+PRUNSERO 	140-250
+QUERALBA 	190-400
+QUERCOCC 	190-250
+QUERPRIN 	190-300
+QUERRUBR 	190-250
+QUERVELU 	190-250
+ROBIPSEU 	150
+SASSALBI 	150
+TILIAMER 	140-250
+TSUGCANA 	140-500
+ULMUAMER 	140-300
+
+
+>>------------------------------------------------------------------------
+>>-----------------------------------------------------------------
+>> HARVEST IMPLEMENTATION TABLE
+>> The following table defines which management units (defined in the
+>> ManagementArea file) are treated by which prescription(s).
+>> In the example below, both management units 1 and 2 are treated
+>> by the same prescription, while management unit 3 is treated by two
+>> different prescriptions.
+>> Also demonstrated is beginning and end times for each prescription
+>> implementation.
+
+  HarvestImplementations
+
+>> Mgmt Area Prescription Harvest Area Begin Time End Time
+>> --------- ------------ ------------ ---------- --------
+>>1 	
+  2 	RandomClearCut 			0.2%
+  2 	PineSalvage 			0.05%
+  2 	LocustSalvage   		0.05%
+  2 	WhitePineReleaseMixedOak 	0.1%
+  2	RandomVariableRetentionClearCut 0.2%
+  2	OakShelterWood  	0.10%	0	16
+  2	OakShelterWood  	0.10%	3	19
+  2	OakShelterWood  	0.10%	6	22
+  2	OakShelterWood  	0.10%	9	25
+  2	OakShelterWood  	0.10%	12	28
+  2	OakShelterWood  	0.10%	15	31
+  2	OakShelterWood  	0.10%	18	34
+  2	OakShelterWood  	0.10%	21	37
+  2	OakShelterWood  	0.10%	24	40
+  2	OakShelterWood  	0.10%	27	43
+  2	OakShelterWood  	0.10%	30	46
+  2	OakShelterWood  	0.10%	33	49
+  2	OakShelterWood  	0.10%	36	52
+  2	OakShelterWood  	0.10%	39	55
+  2	OakShelterWood  	0.10%	42	58
+  2	OakShelterWood  	0.10%	45	61
+  2	OakShelterWood  	0.10%	48	64
+  2	OakShelterWood  	0.10%	51	67
+  2	OakShelterWood  	0.10%	54	70
+  2	OakShelterWood  	0.10%	57	73
+  2	OakShelterWood  	0.10%	60	76
+  2	OakShelterWood  	0.10%	63	79
+  2	OakShelterWood  	0.10%	66	82
+  2	OakShelterWood  	0.10%	69	85
+  2	OakShelterWood  	0.10%	72	88
+  2	OakShelterWood  	0.10%	75	91
+  2	OakShelterWood  	0.10%	78	94
+  2	OakShelterWood  	0.10%	81	97
+  2	OakShelterWood  	0.10%	84	100
+  2	OakShelterWood  	0.10%	87	103
+  2	OakShelterWood  	0.10%	90	106
+  2	OakShelterWood  	0.10%	93	109
+  2	OakShelterWood  	0.10%	96	112
+  2	OakShelterWood  	0.10%	99	115
+  2	OakShelterWood  	0.10%	102	118
+  2	OakShelterWood  	0.10%	105	121
+  2	OakShelterWood  	0.10%	108	124
+  2	OakShelterWood  	0.10%	111	127
+  2	OakShelterWood  	0.10%	114	130
+  2	OakShelterWood  	0.10%	117	133
+  2	OakShelterWood  	0.10%	120	136
+  2	OakShelterWood  	0.10%	123	139
+  2	OakShelterWood  	0.10%	126	142
+  2	OakShelterWood  	0.10%	129	145
+  2	OakShelterWood  	0.10%	132	148
+  2	OakShelterWood  	0.10%	135	151
+  2	OakShelterWood  	0.10%	138	154
+  2	OakShelterWood  	0.10%	141	157
+  2	OakShelterWood  	0.10%	144	160
+  2	OakShelterWood  	0.10%	147	163
+  2	OakShelterWood  	0.10%	150	166
+  2	OakShelterWood  	0.10%	153	169
+  2	OakShelterWood  	0.10%	156	172
+  2	OakShelterWood  	0.10%	159	175
+  2	OakShelterWood  	0.10%	162	178
+  2	OakShelterWood  	0.10%	165	181
+  2	OakShelterWood  	0.10%	168	184
+  2	OakShelterWood  	0.10%	171	187
+  2	OakShelterWood  	0.10%	174	190
+  2	OakShelterWood  	0.10%	177	193
+  2	OakShelterWood  	0.10%	180	196
+  2	OakShelterWood  	0.10%	183	199
+  2	OakShelterWood  	0.10%	186	202
+  2	OakShelterWood  	0.10%	189	205
+  2	OakShelterWood  	0.10%	192	208
+  2	OakShelterWood  	0.10%	195	211
+  2	OakShelterWood  	0.10%	198	214
+  2	OakShelterWood  	0.10%	201	217
+  2	OakShelterWood  	0.10%	204	220
+  2	OakShelterWood  	0.10%	207	223
+  2	OakShelterWood  	0.10%	210	226
+  2	OakShelterWood  	0.10%	213	229
+  2	OakShelterWood  	0.10%	216	232
+  2	OakShelterWood  	0.10%	219	235
+  2	OakShelterWood  	0.10%	222	238
+  2	OakShelterWood  	0.10%	225	241
+  2	OakShelterWood  	0.10%	228	244
+  2	OakShelterWood  	0.10%	231	247
+  2	OakShelterWood  	0.10%	234	250
+  2	OakShelterWood  	0.10%	237	253
+  2	OakShelterWood  	0.10%	240	256
+  2	OakShelterWood  	0.10%	243	259
+  2	OakShelterWood  	0.10%	246	262
+  2	OakShelterWood  	0.10%	249	265
+  2	OakShelterWood  	0.10%	252	268
+  2	OakShelterWood  	0.10%	255	271
+  2	OakShelterWood  	0.10%	258	274
+  2	OakShelterWood  	0.10%	261	277
+  2	OakShelterWood  	0.10%	264	280
+  2	OakShelterWood  	0.10%	267	283
+  2	OakShelterWood  	0.10%	270	286
+  2	OakShelterWood  	0.10%	273	289
+  2	OakShelterWood  	0.10%	276	292
+  2	OakShelterWood  	0.10%	279	295
+  2	OakShelterWood  	0.10%	282	298
+  2	OakShelterWood  	0.10%	285	301
+  2	OakShelterWood  	0.10%	288	304
+  2	OakShelterWood  	0.10%	291	307
+  2	OakShelterWood  	0.10%	294	310
+  2	OakShelterWood  	0.10%	297	313
+  2	OakShelterWood  	0.10%	300	316
+  2	OakShelterWood  	0.10%	303	319
+  2	OakShelterWood  	0.10%	306	322
+  2	OakShelterWood  	0.10%	309	325
+  2	OakShelterWood  	0.10%	312	328
+  2	OakShelterWood  	0.10%	315	331
+  2	OakShelterWood  	0.10%	318	334
+  2	OakShelterWood  	0.10%	321	337
+  2	OakShelterWood  	0.10%	324	340
+  2	OakShelterWood  	0.10%	327	343
+  2	OakShelterWood  	0.10%	330	346
+  2	OakShelterWood  	0.10%	333	349
+  2	OakShelterWood  	0.10%	336	352
+  2	OakShelterWood  	0.10%	339	355
+  2	OakShelterWood  	0.10%	342	358
+  2	OakShelterWood  	0.10%	345	361
+  2	OakShelterWood  	0.10%	348	364
+  2	OakShelterWood  	0.10%	351	367
+  2	OakShelterWood  	0.10%	354	370
+  2	OakShelterWood  	0.10%	357	373
+  2	OakShelterWood  	0.10%	360	376
+  2	OakShelterWood  	0.10%	363	379
+  2	OakShelterWood  	0.10%	366	382
+  2	OakShelterWood  	0.10%	369	385
+  2	OakShelterWood  	0.10%	372	388
+  2	OakShelterWood  	0.10%	375	391
+  2	OakShelterWood  	0.10%	378	394
+  2	OakShelterWood  	0.10%	381	397
+  2	OakShelterWood  	0.10%	384	400
+  2	OakShelterWood  	0.10%	387	400
+  2	OakShelterWood  	0.10%	390	400
+  2	OakShelterWood  	0.10%	393	400
+  2	OakShelterWood  	0.10%	396	400
+  2	SeedTreeVariableRetention 	0.10%	2	43
+  2	SeedTreeVariableRetention 	0.10%	5	46
+  2	SeedTreeVariableRetention 	0.10%	8	49
+  2	SeedTreeVariableRetention 	0.10%	11	52
+  2	SeedTreeVariableRetention 	0.10%	14	55
+  2	SeedTreeVariableRetention 	0.10%	17	58
+  2	SeedTreeVariableRetention 	0.10%	20	61
+  2	SeedTreeVariableRetention 	0.10%	23	64
+  2	SeedTreeVariableRetention 	0.10%	26	67
+  2	SeedTreeVariableRetention 	0.10%	29	70
+  2	SeedTreeVariableRetention 	0.10%	32	73
+  2	SeedTreeVariableRetention 	0.10%	35	76
+  2	SeedTreeVariableRetention 	0.10%	38	79
+  2	SeedTreeVariableRetention 	0.10%	41	82
+  2	SeedTreeVariableRetention 	0.10%	44	85
+  2	SeedTreeVariableRetention 	0.10%	47	88
+  2	SeedTreeVariableRetention 	0.10%	50	91
+  2	SeedTreeVariableRetention 	0.10%	53	94
+  2	SeedTreeVariableRetention 	0.10%	56	97
+  2	SeedTreeVariableRetention 	0.10%	59	100
+  2	SeedTreeVariableRetention 	0.10%	62	103
+  2	SeedTreeVariableRetention 	0.10%	65	106
+  2	SeedTreeVariableRetention 	0.10%	68	109
+  2	SeedTreeVariableRetention 	0.10%	71	112
+  2	SeedTreeVariableRetention 	0.10%	74	115
+  2	SeedTreeVariableRetention 	0.10%	77	118
+  2	SeedTreeVariableRetention 	0.10%	80	121
+  2	SeedTreeVariableRetention 	0.10%	83	124
+  2	SeedTreeVariableRetention 	0.10%	86	127
+  2	SeedTreeVariableRetention 	0.10%	89	130
+  2	SeedTreeVariableRetention 	0.10%	92	133
+  2	SeedTreeVariableRetention 	0.10%	95	136
+  2	SeedTreeVariableRetention 	0.10%	98	139
+  2	SeedTreeVariableRetention 	0.10%	101	142
+  2	SeedTreeVariableRetention 	0.10%	104	145
+  2	SeedTreeVariableRetention 	0.10%	107	148
+  2	SeedTreeVariableRetention 	0.10%	110	151
+  2	SeedTreeVariableRetention 	0.10%	113	154
+  2	SeedTreeVariableRetention 	0.10%	116	157
+  2	SeedTreeVariableRetention 	0.10%	119	160
+  2	SeedTreeVariableRetention 	0.10%	122	163
+  2	SeedTreeVariableRetention 	0.10%	125	166
+  2	SeedTreeVariableRetention 	0.10%	128	169
+  2	SeedTreeVariableRetention 	0.10%	131	172
+  2	SeedTreeVariableRetention 	0.10%	134	175
+  2	SeedTreeVariableRetention 	0.10%	137	178
+  2	SeedTreeVariableRetention 	0.10%	140	181
+  2	SeedTreeVariableRetention 	0.10%	143	184
+  2	SeedTreeVariableRetention 	0.10%	146	187
+  2	SeedTreeVariableRetention 	0.10%	149	190
+  2	SeedTreeVariableRetention 	0.10%	152	193
+  2	SeedTreeVariableRetention 	0.10%	155	196
+  2	SeedTreeVariableRetention 	0.10%	158	199
+  2	SeedTreeVariableRetention 	0.10%	161	202
+  2	SeedTreeVariableRetention 	0.10%	164	205
+  2	SeedTreeVariableRetention 	0.10%	167	208
+  2	SeedTreeVariableRetention 	0.10%	170	211
+  2	SeedTreeVariableRetention 	0.10%	173	214
+  2	SeedTreeVariableRetention 	0.10%	176	217
+  2	SeedTreeVariableRetention 	0.10%	179	220
+  2	SeedTreeVariableRetention 	0.10%	182	223
+  2	SeedTreeVariableRetention 	0.10%	185	226
+  2	SeedTreeVariableRetention 	0.10%	188	229
+  2	SeedTreeVariableRetention 	0.10%	191	232
+  2	SeedTreeVariableRetention 	0.10%	194	235
+  2	SeedTreeVariableRetention 	0.10%	197	238
+  2	SeedTreeVariableRetention 	0.10%	200	241
+  2	SeedTreeVariableRetention 	0.10%	203	244
+  2	SeedTreeVariableRetention 	0.10%	206	247
+  2	SeedTreeVariableRetention 	0.10%	209	250
+  2	SeedTreeVariableRetention 	0.10%	212	253
+  2	SeedTreeVariableRetention 	0.10%	215	256
+  2	SeedTreeVariableRetention 	0.10%	218	259
+  2	SeedTreeVariableRetention 	0.10%	221	262
+  2	SeedTreeVariableRetention 	0.10%	224	265
+  2	SeedTreeVariableRetention 	0.10%	227	268
+  2	SeedTreeVariableRetention 	0.10%	230	271
+  2	SeedTreeVariableRetention 	0.10%	233	274
+  2	SeedTreeVariableRetention 	0.10%	236	277
+  2	SeedTreeVariableRetention 	0.10%	239	280
+  2	SeedTreeVariableRetention 	0.10%	242	283
+  2	SeedTreeVariableRetention 	0.10%	245	286
+  2	SeedTreeVariableRetention 	0.10%	248	289
+  2	SeedTreeVariableRetention 	0.10%	251	292
+  2	SeedTreeVariableRetention 	0.10%	254	295
+  2	SeedTreeVariableRetention 	0.10%	257	298
+  2	SeedTreeVariableRetention 	0.10%	260	301
+  2	SeedTreeVariableRetention 	0.10%	263	304
+  2	SeedTreeVariableRetention 	0.10%	266	307
+  2	SeedTreeVariableRetention 	0.10%	269	310
+  2	SeedTreeVariableRetention 	0.10%	272	313
+  2	SeedTreeVariableRetention 	0.10%	275	316
+  2	SeedTreeVariableRetention 	0.10%	278	319
+  2	SeedTreeVariableRetention 	0.10%	281	322
+  2	SeedTreeVariableRetention 	0.10%	284	325
+  2	SeedTreeVariableRetention 	0.10%	287	328
+  2	SeedTreeVariableRetention 	0.10%	290	331
+  2	SeedTreeVariableRetention 	0.10%	293	334
+  2	SeedTreeVariableRetention 	0.10%	296	337
+  2	SeedTreeVariableRetention 	0.10%	299	340
+  2	SeedTreeVariableRetention 	0.10%	302	343
+  2	SeedTreeVariableRetention 	0.10%	305	346
+  2	SeedTreeVariableRetention 	0.10%	308	349
+  2	SeedTreeVariableRetention 	0.10%	311	352
+  2	SeedTreeVariableRetention 	0.10%	314	355
+  2	SeedTreeVariableRetention 	0.10%	317	358
+  2	SeedTreeVariableRetention 	0.10%	320	361
+  2	SeedTreeVariableRetention 	0.10%	323	364
+  2	SeedTreeVariableRetention 	0.10%	326	367
+  2	SeedTreeVariableRetention 	0.10%	329	370
+  2	SeedTreeVariableRetention 	0.10%	332	373
+  2	SeedTreeVariableRetention 	0.10%	335	376
+  2	SeedTreeVariableRetention 	0.10%	338	379
+  2	SeedTreeVariableRetention 	0.10%	341	382
+  2	SeedTreeVariableRetention 	0.10%	344	385
+  2	SeedTreeVariableRetention 	0.10%	347	388
+  2	SeedTreeVariableRetention 	0.10%	350	391
+  2	SeedTreeVariableRetention 	0.10%	353	394
+  2	SeedTreeVariableRetention 	0.10%	356	397
+  2	SeedTreeVariableRetention 	0.10%	359	400
+  2	SeedTreeVariableRetention 	0.10%	362	400
+  2	SeedTreeVariableRetention 	0.10%	365	400
+  2	SeedTreeVariableRetention 	0.10%	368	400
+  2	SeedTreeVariableRetention 	0.10%	371	400
+  2	SeedTreeVariableRetention 	0.10%	374	400
+  2	SeedTreeVariableRetention 	0.10%	377	400
+  2	SeedTreeVariableRetention 	0.10%	380	400
+  2	SeedTreeVariableRetention 	0.10%	383	400
+  2	SeedTreeVariableRetention 	0.10%	386	400
+  2	SeedTreeVariableRetention 	0.10%	389	400
+  2	SeedTreeVariableRetention 	0.10%	392	400
+  2	SeedTreeVariableRetention 	0.10%	395	400
+  2	CommercialThinningOaks  	0.10%	5	46
+  2	CommercialThinningOaks  	0.10%	10	51
+  2	CommercialThinningOaks  	0.10%	15	56
+  2	CommercialThinningOaks  	0.10%	20	61
+  2	CommercialThinningOaks  	0.10%	25	66
+  2	CommercialThinningOaks  	0.10%	30	71
+  2	CommercialThinningOaks  	0.10%	35	76
+  2	CommercialThinningOaks  	0.10%	40	81
+  2	CommercialThinningOaks  	0.10%	45	86
+  2	CommercialThinningOaks  	0.10%	50	91
+  2	CommercialThinningOaks  	0.10%	55	96
+  2	CommercialThinningOaks  	0.10%	60	101
+  2	CommercialThinningOaks  	0.10%	65	106
+  2	CommercialThinningOaks  	0.10%	70	111
+  2	CommercialThinningOaks  	0.10%	75	116
+  2	CommercialThinningOaks  	0.10%	80	121
+  2	CommercialThinningOaks  	0.10%	85	126
+  2	CommercialThinningOaks  	0.10%	90	131
+  2	CommercialThinningOaks  	0.10%	95	136
+  2	CommercialThinningOaks  	0.10%	100	141
+  2	CommercialThinningOaks  	0.10%	105	146
+  2	CommercialThinningOaks  	0.10%	110	151
+  2	CommercialThinningOaks  	0.10%	115	156
+  2	CommercialThinningOaks  	0.10%	120	161
+  2	CommercialThinningOaks  	0.10%	125	166
+  2	CommercialThinningOaks  	0.10%	130	171
+  2	CommercialThinningOaks  	0.10%	135	176
+  2	CommercialThinningOaks  	0.10%	140	181
+  2	CommercialThinningOaks  	0.10%	145	186
+  2	CommercialThinningOaks  	0.10%	150	191
+  2	CommercialThinningOaks  	0.10%	155	196
+  2	CommercialThinningOaks  	0.10%	160	201
+  2	CommercialThinningOaks  	0.10%	165	206
+  2	CommercialThinningOaks  	0.10%	170	211
+  2	CommercialThinningOaks  	0.10%	175	216
+  2	CommercialThinningOaks  	0.10%	180	221
+  2	CommercialThinningOaks  	0.10%	185	226
+  2	CommercialThinningOaks  	0.10%	190	231
+  2	CommercialThinningOaks  	0.10%	195	236
+  2	CommercialThinningOaks  	0.10%	200	241
+  2	CommercialThinningOaks  	0.10%	205	246
+  2	CommercialThinningOaks  	0.10%	210	251
+  2	CommercialThinningOaks  	0.10%	215	256
+  2	CommercialThinningOaks  	0.10%	220	261
+  2	CommercialThinningOaks  	0.10%	225	266
+  2	CommercialThinningOaks  	0.10%	230	271
+  2	CommercialThinningOaks  	0.10%	235	276
+  2	CommercialThinningOaks  	0.10%	240	281
+  2	CommercialThinningOaks  	0.10%	245	286
+  2	CommercialThinningOaks  	0.10%	250	291
+  2	CommercialThinningOaks  	0.10%	255	296
+  2	CommercialThinningOaks  	0.10%	260	301
+  2	CommercialThinningOaks  	0.10%	265	306
+  2	CommercialThinningOaks  	0.10%	270	311
+  2	CommercialThinningOaks  	0.10%	275	316
+  2	CommercialThinningOaks  	0.10%	280	321
+  2	CommercialThinningOaks  	0.10%	285	326
+  2	CommercialThinningOaks  	0.10%	290	331
+  2	CommercialThinningOaks  	0.10%	295	336
+  2	CommercialThinningOaks  	0.10%	300	341
+  2	CommercialThinningOaks  	0.10%	305	346
+  2	CommercialThinningOaks  	0.10%	310	351
+  2	CommercialThinningOaks  	0.10%	315	356
+  2	CommercialThinningOaks  	0.10%	320	361
+  2	CommercialThinningOaks  	0.10%	325	366
+  2	CommercialThinningOaks  	0.10%	330	371
+  2	CommercialThinningOaks  	0.10%	335	376
+  2	CommercialThinningOaks  	0.10%	340	381
+  2	CommercialThinningOaks  	0.10%	345	386
+  2	CommercialThinningOaks  	0.10%	350	391
+  2	CommercialThinningOaks  	0.10%	355	396
+  2	CommercialThinningOaks  	0.10%	360	400
+  2	CommercialThinningOaks  	0.10%	365	400
+  2	CommercialThinningOaks  	0.10%	370	400
+  2	CommercialThinningOaks  	0.10%	375	400
+  2	CommercialThinningOaks  	0.10%	380	400
+  2	CommercialThinningOaks  	0.10%	385	400
+  2	CommercialThinningOaks  	0.10%	390	400
+  2	CommercialThinningOaks  	0.10%	395	400
+
+ >> CommercialThinning every 5 years, starting year 5.
+ >> OakShelterwood every 3 years starting year 3.
+ >> SeedTreeVariableRetention every 3 years starting year 2. In combo with others should slightly exceed 1%.
+>>3 	
+>>4
+>>5 	
+>>6
+>>------------------------------------------------------------------------
+>> OUTPUT FILES
+
+PrescriptionMaps 	harvest/prescripts-{timestep}.bin
+EventLog 		harvest/event-log.csv
+SummaryLog 		harvest/summary-log.csv
+>>------------------------------------------------------------------------

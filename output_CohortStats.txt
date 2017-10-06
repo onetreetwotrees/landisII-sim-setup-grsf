@@ -1,0 +1,39 @@
+LandisData  "Output Cohort Statistics"
+
+
+Timestep   5
+
+
+>>--------------------------------
+>> OUPUT STATISTICS (Descriptive)
+>>--------------------------------
+
+>> ---- STAT1 ------------------------------------------------
+
+SpeciesAgeStats
+MapNames   output/cohorts/{species}{statistic}-{timestep}.bin
+
+>>MIN 		PICERUBE    	<< minimum age for each species
+>>MAX 		tsugcana	<< maximum age for each species
+>>MED		tsugcana	<< median age for each species
+>>SD		tsugcana	<< standard deviation age for each >>species
+>>AVG		tsugcana	<< average age for each species
+
+>> ---- STAT2 -----------------------------------------------------
+
+SiteAgeStats
+MapNames   output/cohorts/AGE{statistic}-{timestep}.bin
+
+MIN 			<< minimum age across all species on site
+MAX			<< maximum age across all species on site
+MED			<< median age across all species on site
+>>AVG			<< average age across all species on site
+RICH   			<< number of age classes across all species on site
+>>EVEN   		<< evenness 
+COUNT   		<< count of cohorts
+
+>> ---- STAT3 ----------------------------------------------------------
+
+>>SiteSpeciesStats
+>>MapNames   output/cohorts/SPP{statistic}-{timestep}.bin
+>>RICH   			<<count of species

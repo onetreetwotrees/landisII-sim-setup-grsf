@@ -1,0 +1,46 @@
+LandisData  Scenario
+	  
+Duration  400
+
+Species   species_GRSF_new.txt
+
+Ecoregions      ./ecoregions10.txt
+EcoregionsMap   ./soils10class.gis
+
+CellLength  30 << meters, so cell area = 900 m2
+
+
+>> Succession Extension     Initialization File
+>> --------------------     -------------------
+   "Biomass Succession vJRF"     biomass-succession_SetUp_GRSF_2017.txt
+>> Changed this to my edited version of Biomass Succession "vJRF" to improve initial biomass.
+
+
+>> Disturbance Extensions   Initialization File
+>> ----------------------   -------------------
+     "Biomass Insects"	    biomass-insects_SetUp_GM_2017.txt
+     "Base Harvest"	    harvest_prescriptions_sub_new_brute_force_land_2015.txt
+     "Base Wind"	    wind_input.txt  
+   
+>>   DisturbancesRandomOrder  yes  << optional parameter; default = no
+
+
+>> Output Extensions        Initialization File
+>> -----------------        -------------------
+>>  "Max Species Age"        	max-spp-age.output.txt
+    "Output Biomass Reclass"	output_BiomassReclass_GM.txt
+    "Output Biomass"		output_Biomass_SOME_spp.txt
+    "Output Cohort Statistics"	output_CohortStats.txt
+
+>>RandomNumberSeed  3,358  << optional parameter; default = the seed is
+>>  RandomNumberSeed  3,359                       << randomly generated using the current time
+>>   RandomNumberSeed  2415 << RX1, r110423, randomly generated in R. First 5 reps are: 2415, 3914, 2222, 3253, 985
+>>     RandomNumberSeed 2415
+>>    RandomNumberSeed 3914 << RX2, r110424
+>>  RandomNumberSeed 3914
+>>     RandomNumberSeed 2222 << RX3, r110406c,r110426
+>>	RandomNumberSeed 2222
+>>   RandomNumberSeed 3253 << RX4, r110407
+>>  RandomNumberSeed 3253
+>>  RandomNumberSeed 985 << RX5, r110407b
+  RandomNumberSeed 985

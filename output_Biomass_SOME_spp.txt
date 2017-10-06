@@ -1,0 +1,40 @@
+LandisData  "Output Biomass"
+
+Timestep  1
+
+MakeTable no  << Optional parameter
+
+Species   ACERRUBR
+	  ACERSACC
+	  <<CARYGLAB
+	  FRAXAMER
+	  <<JUGLNIGR
+	  LIRITULI
+ 	  <<MAGNACUM
+          <<NYSSSYLV
+	  <<PINUECHI
+	  <<PINUPUNG
+	  <<PINURIGI
+	  PINUSTRO
+	  PINUVIRG
+	  <<POPUGRAN
+	  <<POPUTREM
+	  <<PRUNSERO
+	  QUERALBA
+	  QUERCOCC
+	  QUERPRIN
+	  QUERRUBR
+	  QUERVELU
+	  <<ROBIPSEU
+	  <<SASSALBI
+	  TILIAMER
+	  TSUGCANA
+	  <<ULMUAMER
+	  
+MapNames  output/biomass/{species}-{timestep}.bin
+
+DeadPools woody  << options woody or both?
+
+MapNames  output/biomass/{pool}-{timestep}.bin
+
+
