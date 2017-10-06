@@ -1,0 +1,11 @@
+LandisData "Biomass Insects"
+
+Timestep	1
+
+MapNames	Insects/{insectName}-{timestep}.bin
+
+LogFile		Insects/Insect-log.csv
+
+InsectInputFiles	biomass-insects_InsectDefoliator_FTC_2017_cumM.txt
+			biomass-insects_InsectDefoliator_GM_2017_cumM.txt
+
